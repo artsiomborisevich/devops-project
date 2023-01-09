@@ -37,12 +37,12 @@ jobs:
            ghcr.io/${{ env.REPO }}:latest
            ghcr.io/${{ env.REPO }}:${{ github.ref_name }}
 
-#      - name: Helm tool installer
-#        uses: Azure/setup-helm@v3
-#
-#      - name: Helm Package
-#        run: |
-#          helm package drupal --version=${{ github.ref_name }} --app-version=${{ github.ref_name }} -d ./helm-releases
+      - name: Helm tool installer
+        uses: Azure/setup-helm@v3
+
+      - name: Helm Package
+        run: |
+          helm package drupal --version=${{ github.ref_name }} --app-version=${{ github.ref_name }} -d ./helm-releases
 #          helm repo index --url https://artsiomborisevich.github.io/project-devops/ --merge index.yaml .
 #          git config user.name "$GITHUB_ACTOR"
 #          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
