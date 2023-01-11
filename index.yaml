@@ -4,8 +4,47 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+    appVersion: v0.0.24
+    created: "2023-01-11T17:54:29.287205179Z"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Drupal is one of the most versatile open source content management
+      systems in the world. It is pre-configured with the Ctools and Views modules,
+      Drush and Let's Encrypt auto-configuration support.
+    digest: 09b3bddfb74e767ab7dd73323b7ced4415db254764d8c4f0284b00307b5ffebc
+    home: https://github.com/bitnami/charts/tree/main/bitnami/drupal
+    icon: https://bitnami.com/assets/stacks/drupal/img/drupal-stack-220x234.png
+    keywords:
+    - drupal
+    - cms
+    - blog
+    - http
+    - web
+    - application
+    - php
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: drupal
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/drupal
+    - https://www.drupal.org/
+    urls:
+    - https://artsiomborisevich.github.io/devops-project/helm-releases/drupal-v0.0.24.tgz
+    version: v0.0.24
+  - annotations:
+      category: CMS
+    apiVersion: v2
     appVersion: v0.0.22
-    created: "2023-01-11T17:37:40.922088559Z"
+    created: "2023-01-11T17:54:29.279353133Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -44,7 +83,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.18
-    created: "2023-01-11T17:37:40.911842879Z"
+    created: "2023-01-11T17:54:29.271106979Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -79,4 +118,4 @@ entries:
     urls:
     - https://artsiomborisevich.github.io/devops-project/helm-releases/drupal-v0.0.18.tgz
     version: v0.0.18
-generated: "2023-01-11T17:37:40.901109271Z"
+generated: "2023-01-11T17:54:29.261307096Z"
