@@ -1,0 +1,43 @@
+apiVersion: v1
+entries:
+  drupal:
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: v0.0.18
+    created: "2023-01-11T16:10:52.846613457Z"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Drupal is one of the most versatile open source content management
+      systems in the world. It is pre-configured with the Ctools and Views modules,
+      Drush and Let's Encrypt auto-configuration support.
+    digest: 8f2302b1275a4174200af16b942ab58465693b60aa85c0c2c96047ec843b891e
+    home: https://github.com/bitnami/charts/tree/main/bitnami/drupal
+    icon: https://bitnami.com/assets/stacks/drupal/img/drupal-stack-220x234.png
+    keywords:
+    - drupal
+    - cms
+    - blog
+    - http
+    - web
+    - application
+    - php
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: drupal
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/drupal
+    - https://www.drupal.org/
+    urls:
+    - https://artsiomborisevich.github.io/devops-project/helm-releases/drupal-v0.0.18.tgz
+    version: v0.0.18
+generated: "2023-01-11T16:10:52.835811721Z"
