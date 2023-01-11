@@ -49,7 +49,7 @@ jobs:
           failure-threshold: error
 
   ci-cd:
-    needs: [ helm-files, testing ]
+    needs: [ testing-dockerfile, testing-helm-manifests ]
     env:
       USER: ${{ github.actor }}
       REPO: ${{ github.repository }}
