@@ -18,14 +18,25 @@ jobs:
           FILES="$(ls -d ./drupal/templates/* | jq -R -s -c 'split("\n")[:-1]')"
           echo "files=`echo -n $FILES`" >> $GITHUB_ENV
 
-  testing:
+  testing-helm-manifests:
     needs: helm-files
     runs-on: ubuntu-latest
     strategy:
       matrix:
         manifest-files: ${{fromJson(needs.helm-files.outputs.files)}}
       fail-fast: false
+    steps:
+      - name: Get files from repo
+        uses: actions/checkout@v3
 
+      - name: Test helm files with kubeval
+        continue-on-error: true
+        uses: instrumenta/kubeval-action@master
+        with:
+          files: ${{matrix.manifest-files}}
+
+  testing-dockerfile:
+    runs-on: ubuntu-latest
     steps:
       - name: Get files from repo
         uses: actions/checkout@v3
@@ -36,12 +47,6 @@ jobs:
         with:
           dockerfile: Dockerfile
           failure-threshold: error
-
-      - name: Test helm files with kubeval
-        continue-on-error: true
-        uses: instrumenta/kubeval-action@master
-        with:
-          files: ${{matrix.manifest-files}}
 
   ci-cd:
     needs: [ helm-files, testing ]
