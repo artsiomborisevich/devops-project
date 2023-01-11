@@ -12,10 +12,10 @@ jobs:
       files: ${{ env.files }}
     steps:
       - name: Get files
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         id: files
       - run: |
-          FILES="$(ls -d ./manifests/* | jq -R -s -c 'split("\n")[:-1]')"
+          FILES="$(ls -d ./drupal/templates/* | jq -R -s -c 'split("\n")[:-1]')"
           echo "files=`echo -n $FILES`" >> $GITHUB_ENV
 
   ci-cd:
