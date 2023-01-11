@@ -61,7 +61,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: main
 
 #      - name: Slack Notification
 #        uses: rtCamp/action-slack-notify@v2
