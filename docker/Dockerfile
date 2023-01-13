@@ -45,7 +45,9 @@ RUN apt-get autoremove --purge -y curl && \
 RUN chmod g+rwX /opt/bitnami
 
 COPY rootfs /
-RUN chmod -R 755 /opt/bitnami/
+RUN chmod -R 755 /opt/bitnami/ && \
+    chmod -R 755 /post-init.d/ && \
+    chmod +x post-init.sh
 RUN /opt/bitnami/scripts/apache/postunpack.sh
 RUN /opt/bitnami/scripts/php/postunpack.sh
 RUN /opt/bitnami/scripts/apache-modphp/postunpack.sh
@@ -59,6 +61,6 @@ ENV APACHE_HTTPS_PORT_NUMBER="" \
 
 EXPOSE 8080 8443
 
-USER 0
+USER 1001
 ENTRYPOINT [ "/opt/bitnami/scripts/drupal/entrypoint.sh" ]
 CMD [ "/opt/bitnami/scripts/apache/run.sh" ]
