@@ -45,7 +45,7 @@ RUN apt-get autoremove --purge -y curl && \
 RUN chmod g+rwX /opt/bitnami
 
 COPY rootfs /
-RUN chmod -R 755 /opt/bitnami/scripts/
+RUN chmod -R 755 /opt/bitnami/
 RUN /opt/bitnami/scripts/apache/postunpack.sh
 RUN /opt/bitnami/scripts/php/postunpack.sh
 RUN /opt/bitnami/scripts/apache-modphp/postunpack.sh
