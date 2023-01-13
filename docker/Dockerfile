@@ -1,5 +1,7 @@
 FROM docker.io/bitnami/minideb:bullseye
 
+USER 0
+
 ARG TARGETARCH
 
 LABEL org.opencontainers.image.authors="https://bitnami.com/contact" \
@@ -17,6 +19,8 @@ ENV HOME="/" \
 
 COPY prebuildfs /
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+USER 0
 # Install required system packages and dependencies
 RUN chmod +x /usr/sbin/install_packages && \
     chmod -R 755 /opt/bitnami/
@@ -62,6 +66,5 @@ ENV APACHE_HTTPS_PORT_NUMBER="" \
 
 EXPOSE 8080 8443
 
-USER 1001
 ENTRYPOINT [ "/opt/bitnami/scripts/drupal/entrypoint.sh" ]
 CMD [ "/opt/bitnami/scripts/apache/run.sh" ]
