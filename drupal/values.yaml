@@ -76,7 +76,7 @@ image:
   debug: false
 ## @param replicaCount Number of Drupal Pods to run (requires ReadWriteMany PVC support)
 ##
-replicaCount: 1
+replicaCount: 2
 ## @param drupalProfile Drupal installation profile
 ## ref: https://github.com/bitnami/containers/tree/main/bitnami/drupal#configuration
 ##
@@ -179,7 +179,7 @@ serviceAccount:
   automountServiceAccountToken: true
 ## @param existingSecret Name of a secret with the application password
 ##
-existingSecret: ""
+existingSecret: argo-secrets-drupal
 ## SMTP mail delivery configuration
 ## ref: https://github.com/bitnami/containers/tree/main/bitnami/drupal/#smtp-configuration
 ## @param smtpHost SMTP host
@@ -617,9 +617,9 @@ externalDatabase:
   host: 192.168.201.3
   port: 3306
   user: drupal
-  password: drupal
+  password: XXX
   database: drupal
-  existingSecret: ""
+  existingSecret: argo-secrets-drupal
 
 ## @section Volume Permissions parameters
 
