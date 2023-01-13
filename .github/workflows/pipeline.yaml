@@ -45,7 +45,7 @@ jobs:
         continue-on-error: true
         uses: hadolint/hadolint-action@v2.1.0
         with:
-          dockerfile: Dockerfile
+          dockerfile: ./docker/Dockerfile
           failure-threshold: error
 
   ci-cd:
@@ -79,7 +79,7 @@ jobs:
         id: push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: ./docker
           push: true
           tags: |
             ghcr.io/${{ env.REPO }}:latest
