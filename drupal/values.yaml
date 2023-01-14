@@ -295,7 +295,7 @@ resources:
 ## @param podSecurityContext.fsGroup Drupal pods' group ID
 ##
 podSecurityContext:
-  enabled: false
+  enabled: true
   fsGroup: 1001
 ## Configure Container Security Context (only main container)
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
@@ -304,9 +304,9 @@ podSecurityContext:
 ## @param containerSecurityContext.runAsNonRoot Set Controller container's Security Context runAsNonRoot
 ##
 containerSecurityContext:
-  enabled: false
-  runAsUser: 0
-  runAsNonRoot: false
+  enabled: true
+  runAsUser: 1001
+  runAsNonRoot: true
 ## Configure extra options for startup probe
 ## Drupal core exposes /user/login to unauthenticated requests, making it a good
 ## default startup and readiness path. However, that may not always be the
