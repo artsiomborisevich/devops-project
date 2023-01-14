@@ -4,8 +4,47 @@ entries:
   - annotations:
       category: CMS
     apiVersion: v2
+    appVersion: v0.0.43
+    created: "2023-01-14T06:53:01.968849576Z"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Drupal is one of the most versatile open source content management
+      systems in the world. It is pre-configured with the Ctools and Views modules,
+      Drush and Let's Encrypt auto-configuration support.
+    digest: 3c450f382f51736553c7ba5cbda87c47fbd44f84b272d2101804d19d11d4fe56
+    home: https://github.com/bitnami/charts/tree/main/bitnami/drupal
+    icon: https://bitnami.com/assets/stacks/drupal/img/drupal-stack-220x234.png
+    keywords:
+    - drupal
+    - cms
+    - blog
+    - http
+    - web
+    - application
+    - php
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: drupal
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/drupal
+    - https://www.drupal.org/
+    urls:
+    - https://artsiomborisevich.github.io/devops-project/helm-releases/drupal-v0.0.43.tgz
+    version: v0.0.43
+  - annotations:
+      category: CMS
+    apiVersion: v2
     appVersion: v0.0.42
-    created: "2023-01-14T06:30:20.982105136Z"
+    created: "2023-01-14T06:53:01.956914488Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -44,7 +83,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.38
-    created: "2023-01-14T06:30:20.974754249Z"
+    created: "2023-01-14T06:53:01.947896868Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -83,7 +122,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.37
-    created: "2023-01-14T06:30:20.964279467Z"
+    created: "2023-01-14T06:53:01.93908836Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -122,7 +161,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.36
-    created: "2023-01-14T06:30:20.957189779Z"
+    created: "2023-01-14T06:53:01.930063439Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -161,7 +200,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.35
-    created: "2023-01-14T06:30:20.949482892Z"
+    created: "2023-01-14T06:53:01.921521146Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -200,7 +239,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.34
-    created: "2023-01-14T06:30:20.942351104Z"
+    created: "2023-01-14T06:53:01.907068512Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -239,7 +278,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.33
-    created: "2023-01-14T06:30:20.933830419Z"
+    created: "2023-01-14T06:53:01.895995374Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -278,7 +317,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.27
-    created: "2023-01-14T06:30:20.926657631Z"
+    created: "2023-01-14T06:53:01.88570338Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -317,7 +356,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.26
-    created: "2023-01-14T06:30:20.919325344Z"
+    created: "2023-01-14T06:53:01.876410944Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -356,7 +395,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.25
-    created: "2023-01-14T06:30:20.911919857Z"
+    created: "2023-01-14T06:53:01.867527931Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -395,7 +434,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.24
-    created: "2023-01-14T06:30:20.903787971Z"
+    created: "2023-01-14T06:53:01.858077586Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -434,7 +473,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.22
-    created: "2023-01-14T06:30:20.896601283Z"
+    created: "2023-01-14T06:53:01.84686984Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -473,7 +512,7 @@ entries:
       category: CMS
     apiVersion: v2
     appVersion: v0.0.18
-    created: "2023-01-14T06:30:20.887608399Z"
+    created: "2023-01-14T06:53:01.837137778Z"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -508,4 +547,4 @@ entries:
     urls:
     - https://artsiomborisevich.github.io/devops-project/helm-releases/drupal-v0.0.18.tgz
     version: v0.0.18
-generated: "2023-01-14T06:30:20.879713612Z"
+generated: "2023-01-14T06:53:01.826352756Z"
