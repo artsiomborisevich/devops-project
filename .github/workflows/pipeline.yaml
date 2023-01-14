@@ -82,8 +82,8 @@ jobs:
           context: ./docker
           push: true
           tags: |
-            ghcr.io/bitnami/drupal:latest
-            ghcr.io/bitnami/drupal:${{ github.ref_name }}
+            ghcr.io/${{ env.REPO }}/drupal:latest
+            ghcr.io/${{ env.REPO }}/drupal:${{ github.ref_name }}
 
       - name: Helm tool installer
         uses: Azure/setup-helm@v3
