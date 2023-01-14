@@ -295,7 +295,7 @@ resources:
 ## @param podSecurityContext.fsGroup Drupal pods' group ID
 ##
 podSecurityContext:
-  enabled: true
+  enabled: false
   fsGroup: 1001
 ## Configure Container Security Context (only main container)
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
