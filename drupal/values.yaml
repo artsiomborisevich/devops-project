@@ -305,8 +305,8 @@ podSecurityContext:
 ##
 containerSecurityContext:
   enabled: true
-  runAsUser: 1001
-  runAsNonRoot: true
+  runAsUser: 0
+  runAsNonRoot: false
 ## Configure extra options for startup probe
 ## Drupal core exposes /user/login to unauthenticated requests, making it a good
 ## default startup and readiness path. However, that may not always be the
