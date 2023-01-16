@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     tags:
-      - "*.*"
+      - "v*.*"
 
 jobs:
   helm-files:
@@ -82,7 +82,6 @@ jobs:
           context: ./docker
           push: true
           tags: |
-            ghcr.io/${{ env.REPO }}:latest
             ghcr.io/${{ env.REPO }}:${{ github.ref_name }}
 
       - name: Helm tool installer
@@ -90,6 +89,7 @@ jobs:
 
       - name: Helm Package
         run: |
+          sed -i 's/__replaceWithTag__/${{ github.ref_name }}/' drupal/values.yaml
           helm package drupal --version=${{ github.ref_name }} --app-version=${{ github.ref_name }} -d ./helm-releases
           helm repo index --url https://artsiomborisevich.github.io/devops-project/ --merge index.yaml .
 
