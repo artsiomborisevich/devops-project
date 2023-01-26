@@ -21,8 +21,11 @@
 ---
 
 ## CI/CD description:
-GitHub actions workflow starting after pushing to the main branch.
-
+GitHub actions workflow starting after pushing tag to the repo. You can use following commands(with your tag version):
+```bash
+git tag -a v1.0.0 -m "v1.0.0"
+git push origin v1.0.0 
+```
 ### CI has following steps:
 | Action                       | Description                                                                                                                                            |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
