@@ -17,7 +17,7 @@
 - **Automation tools:** Github actions, ArgoCD, Ansible
 - **SCM:** GitHub
 - **Notification:** Slack
-- **Other tools:** Docker, Helm
+- **Other tools:** Docker, Helm , MariaDB, NFS
 ---
 
 ## CI/CD description:
