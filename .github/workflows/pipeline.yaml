@@ -108,15 +108,15 @@ jobs:
           branch: main
 
       - name: Publish Helm charts
-          uses: stefanprodan/helm-gh-pages@master
-          with:
-            charts_dir: helm-source
-            branch: main
-            linting: off
-            charts_url: https://artsiomborisevich.github.io/devops-project/
-            token: ${{ secrets.GITHUB_TOKEN }}
-            app_version: ${{ github.ref_name }}
-            chart_version: ${{ github.ref_name }}
+        uses: stefanprodan/helm-gh-pages@master
+        with:
+          charts_dir: helm-source
+          branch: main
+          linting: off
+          charts_url: https://artsiomborisevich.github.io/devops-project/
+          token: ${{ secrets.GITHUB_TOKEN }}
+          app_version: ${{ github.ref_name }}
+          chart_version: ${{ github.ref_name }}
 
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
