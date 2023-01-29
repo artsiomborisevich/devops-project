@@ -110,7 +110,7 @@ jobs:
       - name: Publish Helm charts
         uses: stefanprodan/helm-gh-pages@master
         with:
-          charts_dir: helm-source
+          charts_dir: drupal
           branch: main
           linting: off
           charts_url: https://artsiomborisevich.github.io/devops-project/
