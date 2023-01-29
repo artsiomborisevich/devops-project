@@ -111,6 +111,7 @@ jobs:
         uses: stefanprodan/helm-gh-pages@master
         with:
           charts_dir: drupal
+          target_dir: charts
           branch: main
           linting: off
           charts_url: https://artsiomborisevich.github.io/devops-project/
