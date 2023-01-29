@@ -110,7 +110,7 @@ jobs:
       - name: Publish Helm charts
         uses: stefanprodan/helm-gh-pages@master
         with:
-          charts_dir: drupal
+          charts_dir: drupal/Chart.yaml
           target_dir: charts
           branch: main
           linting: off
