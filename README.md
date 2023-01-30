@@ -14,7 +14,7 @@
 ---
 ## Technologies which were used in project
 - **Orchestration:** Kubernetes
-- **Automation tools:** Github actions, ArgoCD, Ansible
+- **Automation tools:** Github actions, ArgoCD, Argo Rollouts, Ansible
 - **SCM:** GitHub
 - **Notification:** Slack
 - **Other tools:** Docker, Helm , MariaDB, NFS
