@@ -45,4 +45,5 @@ git push origin v1.0.0
 
 ## Links:
 Project repository: https://github.com/artsiomborisevich/devops-project
+
 Argo rollouts: https://argo-rollouts.readthedocs.io/en/stable/
