@@ -19,6 +19,7 @@ spec:
       previewService: {{ include "common.names.fullname" . }}-preview
       autoPromotionEnabled: false
   replicas: {{ .Values.replicaCount }}
+  revisionHistoryLimit: 3
   template:
     metadata:
       labels: {{- include "common.labels.standard" . | nindent 8 }}

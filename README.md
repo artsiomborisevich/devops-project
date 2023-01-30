@@ -40,6 +40,7 @@ git push origin v1.0.0
 
 - GitHub pages is used as helm artifactory
 - ArgoCD WebUI or console is used for deployment
+- Argo Rollouts are used for Blue-Green update strategy
 ---
 
 ## Links:
