@@ -7,6 +7,14 @@
 - **Programimg language:** PHP
 - **DB:** MariaDB
 ---
+## **Getting Started. To use this ci-cd you should have or install:**
+- Kubernetes cluster (You can try k3s)
+- Database (it could be done via Ansible (MariaDB as example))
+- Sealed-secrets controller (to store your secrets in repo in a safe way)
+- ArgoCD
+- Argo Rollouts 
+- NFS
+---
 ## Pipeline. High Level Design
 
 ![](scheme.jpg)
